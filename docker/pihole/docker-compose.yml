@@ -13,3 +13,9 @@ services:
       - ./etc-dnsmasq.d:/etc/dnsmasq.d
     cap_add:
       - NET_ADMIN
+    networks:
+      - monitoring-network
+
+networks:
+  monitoring-network:
+    external: true
