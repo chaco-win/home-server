@@ -1,0 +1,29 @@
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+*.old
+
+# Env and secret files
+.env
+.env.*
+
+# Docker data/volumes
+**/data/
+**/volumes/
+**/logs/
+
+# System/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# Node.js
+node_modules/
+dist/
+.cache/
