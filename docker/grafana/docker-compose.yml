@@ -1,16 +1,15 @@
-
 services:
   grafana:
-    image: grafana/grafana-oss
+    image: grafana/grafana:latest
     container_name: grafana
+    restart: unless-stopped
     ports:
       - "3000:3000"
-    volumes:
-      - grafana-data:/var/lib/grafana
     environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin
-    restart: unless-stopped
+      GF_SECURITY_ADMIN_PASSWORD: "changeme"
+    networks:
+      - monitoring-network
 
-volumes:
-  grafana-data:
+networks:
+  monitoring-network:
+    external: true
