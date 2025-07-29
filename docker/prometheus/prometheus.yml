@@ -1,10 +1,7 @@
 scrape_configs:
   - job_name: pihole
-    metrics_path: /admin/api.php
-    scheme: http
-    params:
-      status: [""]
-      prometheus: [""]
-      auth: ["zEgdNhlGwviup1EX3+AFR4flKV+ZuLiX2kLy0l6+7lM="]
     static_configs:
-      - targets: ['192.168.1.1:9617']
+      - targets: ['192.168.1.1:9617']  # exporter IP and port
+    metrics_path: /metrics             # Prometheus exporter metrics endpoint
+    params:
+      auth: ["zEgdNhlGwviup1EX3+AFR4flKV+ZuLiX2kLy0l6+7lM="]  # your Pi-hole token if needed
