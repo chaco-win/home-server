@@ -12,3 +12,12 @@ services:
       - ./etc-dnsmasq.d:/etc/dnsmasq.d
     cap_add:
       - NET_ADMIN
+
+pihole-exporter:
+    image: eko/pihole-exporter:latest
+    restart: unless-stopped
+    ports:
+      - "9617:9617"
+    environment:
+      PIHOLE_HOST: http://localhost/admin
+      PIHOLE_TOKEN: "zEgdNhlGwviup1EX3+AFR4flKV+ZuLiX2kLy0l6+7lM="
