@@ -1,0 +1,14 @@
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    restart: unless-stopped
+    network_mode: "host"
+    environment:
+      TZ: 'America/Chicago'  # Change to your timezone
+      WEBPASSWORD: 'changeme'  # Change this password!
+    volumes:
+      - ./etc-pihole:/etc/pihole
+      - ./etc-dnsmasq.d:/etc/dnsmasq.d
+    cap_add:
+      - NET_ADMIN
