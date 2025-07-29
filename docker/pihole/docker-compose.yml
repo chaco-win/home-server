@@ -1,4 +1,4 @@
-version: "3"
+
 services:
   pihole:
     container_name: pihole
@@ -14,7 +14,7 @@ services:
     cap_add:
       - NET_ADMIN
 
-pihole-exporter:
+  pihole-exporter:
     image: eko/pihole-exporter:latest
     restart: unless-stopped
     ports:
