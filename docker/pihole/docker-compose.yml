@@ -15,7 +15,7 @@ services:
       - NET_ADMIN
 
   pihole-exporter:
-    image: eko/pihole-exporter:latest
+    image: diginc/pihole-exporter:latest
     restart: unless-stopped
     ports:
       - "9617:9617"
