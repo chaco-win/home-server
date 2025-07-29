@@ -1,9 +1,0 @@
-scrape_configs:
-  - job_name: pihole
-    metrics_path: /admin/api.php
-    params:
-      status: [""]
-      prometheus: [""]
-      auth: ["zEgdNhlGwviup1EX3+AFR4flKV+ZuLiX2kLy0l6+7lM="]
-    static_configs:
-      - targets: ['192.168.1.1']
