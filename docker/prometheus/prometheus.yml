@@ -6,4 +6,4 @@ scrape_configs:
       prometheus: [""]
       auth: ["zEgdNhlGwviup1EX3+AFR4flKV+ZuLiX2kLy0l6+7lM="]
     static_configs:
-      - targets: ['192.168.1.1']
+      - targets: ['pihole-exporter:9617']
