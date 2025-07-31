@@ -7,14 +7,9 @@ services:
     environment:
       TZ: 'America/Chicago'  # Change to your timezone
       WEBPASSWORD: 'changeme'  # Change this password!
+      FTL_CMD: "local-ttl=300"
     volumes:
       - ./etc-pihole:/etc/pihole
       - ./etc-dnsmasq.d:/etc/dnsmasq.d
     cap_add:
       - NET_ADMIN
-    networks:
-      - monitoring-network
-
-networks:
-  monitoring-network:
-    external: true
