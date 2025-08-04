@@ -175,7 +175,7 @@ params:
       items:
         - "Docker"
         - "Linux Administration"
-        - "Python
+        - "Python"
         - "Node"
 
   # Experience
@@ -192,9 +192,9 @@ params:
           name: "View the project"
           url: "https://example.com"
         content: 
-          -Led IT infrastructure projects supporting over 230 systems and 200+ users
-          -Oversaw Active Directory, endpoint security, and Windows Server environments
-          -Directed ERP migration and implemented automated scripting with PowerShell
+          - Led IT infrastructure projects supporting over 230 systems and 200+ users
+          - versaw Active Directory, endpoint security, and Windows Server environments
+          - Directed ERP migration and implemented automated scripting with PowerShell
 
       - job: "IT Support Specialist"
         company: "Sovereign Pharmaceuticals"
