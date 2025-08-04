@@ -280,7 +280,28 @@ params:
 #        featuredLink:
 #          enable: true
 #          url: "https://example.com"
-
+# Certifications
+  certifications:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: CompTIA Security+
+        content: Completed Oct-8-2022
+        url: https://www.credly.com/badges/e2998bfa-0daa-49a3-8139-d894c0bb11a0
+        image: /images/Security+-jpg.jpg
+      - title: CompTIA Network+
+        content: Completed Jan-23-2022
+        url: https://www.credly.com/badges/9a9efe12-d442-47c5-ad46-e8831bbce715
+        image: /images/Network+-jpg.jpg
+      - title: CompTIA A+
+        content: Completed Jun-14-2021
+        url: "https://www.credly.com/badges/bca47ce0-3102-4b96-9256-230ac86bb3bb"
+        image: /images/A+-jpg.jpg
+      #- title: Microsoft Imagine Runner
+      #  content: We are developed a product which can help others.
+      #- title: Google Summer of Code
+      #  content: Contributed to a open source project.
+      #  url: https://example.com
   # Certifications
   achievements:
     enable: true
