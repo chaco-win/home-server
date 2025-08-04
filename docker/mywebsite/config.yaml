@@ -125,9 +125,9 @@ params:
     menus:
       disableAbout: false
       disableExperience: false
-      disableEducation: false
+      disableEducation: true
       disableProjects: false
-      disableAchievements: false
+      disableCertifications: false
       disableContact: false
 
   # Hero
@@ -224,7 +224,7 @@ params:
 
       - job: "Various Roles (Team Lead, Trainer, Sales)"
         company: "Walmart & 7-Eleven"
-        #companyUrl: "https://example.com"
+        companyUrl: "https://example.com"
         date: "Jun 2018 – Aug 2021"
         featuredLink:
           enable: false
