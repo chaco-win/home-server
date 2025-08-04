@@ -135,7 +135,7 @@ params:
     enable: true
     intro: "Hello, my name is"
     title: "Chase."
-    subtitle: "I am an IT profesinal and wanabe Devops Enginer"
+    subtitle: "I am an IT profesinal and wannabe Devops Engineer"
     #content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that look great, feel fantastic, and function correctly."
     image: /images/hero.svg
     bottomImage:
@@ -282,7 +282,7 @@ params:
 #          url: "https://example.com"
 
   # Certifications
-  certifications:
+  achievements:
     enable: true
     # title: "Custom Name"
     items:
