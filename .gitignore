@@ -27,3 +27,6 @@ __pycache__/
 node_modules/
 dist/
 .cache/
+
+# Pi-Hole
+docker/pihole/etc-pihole/
