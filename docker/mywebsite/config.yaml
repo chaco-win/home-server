@@ -126,7 +126,7 @@ params:
       disableAbout: false
       disableExperience: false
       disableEducation: true
-      disableProjects: false
+      disableProjects: true
       disableCertifications: false
       disableContact: false
 
@@ -136,7 +136,7 @@ params:
     intro: "Hello, my name is"
     title: "Chase."
     subtitle: "I am an IT profesinal and wanabe Devops Enginer"
-    content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that look great, feel fantastic, and function correctly."
+    #content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that look great, feel fantastic, and function correctly."
     image: /images/hero.svg
     bottomImage:
       enable: true
@@ -224,7 +224,7 @@ params:
 
       - job: "Various Roles (Team Lead, Trainer, Sales)"
         company: "Walmart & 7-Eleven"
-        companyUrl: "https://example.com"
+        companyUrl: "https://walmart.com"
         date: "Jun 2018 – Aug 2021"
         featuredLink:
           enable: false
