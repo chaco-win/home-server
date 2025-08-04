@@ -1,6 +1,6 @@
 baseURL: "https://hugo-profile.netlify.app"
 languageCode: "en-us"
-title: "Hugo Profile"
+title: "Chaco Central"
 theme: profile
 
 outputs:
@@ -133,9 +133,9 @@ params:
   # Hero
   hero:
     enable: true
-    intro: "Hi, my name is"
-    title: "Isabella."
-    subtitle: "I build things for the web"
+    intro: "Hello, my name is"
+    title: "Chase."
+    subtitle: "I am an IT profesinal and wanabe Devops Enginer"
     content: "A passionate web app developer. I tend to make use of modern web technologies to build websites that look great, feel fantastic, and function correctly."
     image: /images/hero.svg
     bottomImage:
@@ -163,149 +163,146 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA.
-
-      I am currently working on a project that will be used to help people find the best way to get around the city.
+      Hands-on IT Manager with 5+ years of experience building, automating, and
+      maintaining hybrid IT environments for 200+ users and 230+ systems. Experienced in
+      scripting infrastructure automation with PowerShell, managing Microsoft 365 and
+      Azure AD environments, and leading migrations, ERP transitions, and security
+      deployments. Passionate about infrastructure as code, monitoring, and cloud
+      operations, with a strong interest in expanding DevOps and AWS experience.
     skills:
       enable: true
       title: "Here are a few technologies I've been working with recently:"
       items:
-        - "HTML"
-        - "CSS"
-        - "JavaScript"
-        - "React"
+        - "Docker"
+        - "Linux Administration"
+        - "Python
         - "Node"
-        - "Express"
 
   # Experience
   experience:
     enable: true
     # title: "Custom Name"
     items:
-      - job: "Senior Software Developer"
-        company: "Facebook"
-        companyUrl: "https://example.com"
-        date: "Jan 2022 - present"
+      - job: "IT Manager"
+        company: "Sovereign Pharmaceuticals"
+        companyUrl: "https://www.sovpharm.com/"
+        date: "Sept 2023 - July 2025"
         featuredLink:
-          enable: true
+          enable: false
           name: "View the project"
           url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+        content: 
+          -Led IT infrastructure projects supporting over 230 systems and 200+ users
+          -Oversaw Active Directory, endpoint security, and Windows Server environments
+          -Directed ERP migration and implemented automated scripting with PowerShell
 
-      - job: "Software Developer"
-        company: "Amazon"
-        companyUrl: "https://example.com"
+      - job: "IT Support Specialist"
+        company: "Sovereign Pharmaceuticals"
+        companyUrl: "https://www.sovpharm.com/"
         date: "Sep 2020 - Dec 2021"
         featuredLink:
-          enable: true
+          enable: false
           url: "https://example.com"
         info:
-          enable: true
-          content: I worked as a software developer for more than one year in Amazon.
+          enable: false
+          content:
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          - Provided tiered support and managed Microsoft 365/Azure AD
+          - Handled patch management, imaging, and system deployment
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "Junior Software Developer"
-        company: "Apple"
-        companyUrl: "https://example.com"
-        date: "Jan 2020 - Aug 2020"
+      - job: "Account Support Specialist"
+        company: "PRA Group"
+        companyUrl: "https://www.pragroup.com/"
+        date: "Aug 2021 – Feb 2022"
         info:
           enable: false
         featuredLink:
-          enable: true
+          enable: false
           url: "https://example.com"
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          - Delivered customer support in a high-volume financial services environment
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "UI/UX Designer"
-        company: "Netflix"
-        companyUrl: "https://example.com"
-        date: "June 2017 - Nov 2019"
+      - job: "Various Roles (Team Lead, Trainer, Sales)"
+        company: "Walmart & 7-Eleven"
+        #companyUrl: "https://example.com"
+        date: "Jun 2018 – Aug 2021"
         featuredLink:
-          enable: true
+          enable: false
           url: "https://example.com"
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          - Managed training and operations in customer-facing roles
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "Product Designer"
-        company: "Google"
-        companyUrl: "https://example.com"
-        date: "Feb 2016 - Mar 2017"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+     #- job: "Product Designer"
+      #  company: "Google"
+      #  companyUrl: "https://example.com"
+     #   date: "Feb 2016 - Mar 2017"
+     #   content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
 
   # Education
-  education:
+#  education:
+#   enable: true
+#    # title: "Custom Name"
+#    index: false
+#    items:
+#      - title: "Master of Business Administration"
+#        school:
+#          name: "University of California, Berkeley"
+#          url: "https://example.org"
+#        date: "2013 - 2015"
+#        GPA: "3.8 out of 5.0"
+#        content: |-
+#          Extracurricular Activities
+#            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+#            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+#      - title: "Bachelor of Science in Computer Science"
+#        school:
+#          name: "Massachusetts Institute of Technology"
+#          url: "https://example.org"
+#        date: "2009 - 2013"
+#        GPA: "3.9 out of 5.0"
+#        content: |-
+#          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
+#          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+#          - Face mask detection using a single convolutional neural network.
+#
+#          Extracurricular Activities
+#            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+#            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+#        featuredLink:
+#          enable: true
+#          name: "My academic record"
+#          url: "https://example.com"
+#      - title: "High School"
+#        school:
+#          name: "Thomas Jefferson High School for Science and Technology."
+#          url: "https://example.org"
+#        GPA: "4.2 out of 5.0"
+#        featuredLink:
+#          enable: true
+#          url: "https://example.com"
+
+  # Certifications
+  certifications:
     enable: true
     # title: "Custom Name"
-    index: false
     items:
-      - title: "Master of Business Administration"
-        school:
-          name: "University of California, Berkeley"
-          url: "https://example.org"
-        date: "2013 - 2015"
-        GPA: "3.8 out of 5.0"
-        content: |-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-      - title: "Bachelor of Science in Computer Science"
-        school:
-          name: "Massachusetts Institute of Technology"
-          url: "https://example.org"
-        date: "2009 - 2013"
-        GPA: "3.9 out of 5.0"
-        content: |-
-          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-          - Face mask detection using a single convolutional neural network.
-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-        featuredLink:
-          enable: true
-          name: "My academic record"
-          url: "https://example.com"
-      - title: "High School"
-        school:
-          name: "Thomas Jefferson High School for Science and Technology."
-          url: "https://example.org"
-        GPA: "4.2 out of 5.0"
-        featuredLink:
-          enable: true
-          url: "https://example.com"
-
-  # Achievements
-  achievements:
-    enable: true
-    # title: "Custom Name"
-    items:
-      - title: Google kickstart runner
-        content: I solved all problems with optimal solution.
-        url: https://example.com
-        image: /images/achievement.jpg
-      - title: Facebook Hackathon Winner
-        content: Developed a product using Artificial Intelligence.
-        image: /images/achievement.jpg
-      - title: Hugo Profile
-        content: Developed a theme and getting 1K+ downloads per month.
-        url: "https://github.com/gurusabarish/hugo-profile"
-        image: /images/achievement.jpg
-      - title: Microsoft Imagine Runner
-        content: We are developed a product which can help others.
-      - title: Google Summer of Code
-        content: Contributed to a open source project.
-        url: https://example.com
+      - title: CompTIA Security+
+        content: Completed Oct-8-2022
+        url: https://www.credly.com/badges/e2998bfa-0daa-49a3-8139-d894c0bb11a0
+        image: /images/Security+-jpg.jpg
+      - title: CompTIA Network+
+        content: Completed Jan-23-2022
+        url: https://www.credly.com/badges/9a9efe12-d442-47c5-ad46-e8831bbce715
+        image: /images/Network+-jpg.jpg
+      - title: CompTIA A+
+        content: Completed Jun-14-2021
+        url: "https://www.credly.com/badges/bca47ce0-3102-4b96-9256-230ac86bb3bb"
+        image: /images/A+-jpg.jpg
+      #- title: Microsoft Imagine Runner
+      #  content: We are developed a product which can help others.
+      #- title: Google Summer of Code
+      #  content: Contributed to a open source project.
+      #  url: https://example.com
 
   # projects
   projects:
