@@ -36,15 +36,17 @@ services:
 
 networks:
   ph_network:
+    name: ph_network
     driver: macvlan
     driver_opts:
-      parent: enp3s0        
+      parent: enp3s0
     ipam:
       config:
         - subnet: 10.0.0.0/24
           gateway: 10.0.0.1
           ip_range: 10.0.0.2/32
   ph_bridge:
+    name: ph_bridge
     driver: bridge
     ipam:
       config:
