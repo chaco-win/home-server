@@ -21,7 +21,7 @@ services:
       ph_network:
         ipv4_address: 10.0.0.2
       ph_bridge:
-        ipv4_address: 172.28.0.2
+        ipv4_address: 172.28.0.3
     environment:
       TZ: America/Chicago
       WEBPASSWORD: "change-me"
