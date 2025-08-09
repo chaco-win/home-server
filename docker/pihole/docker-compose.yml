@@ -8,9 +8,7 @@ services:
       ph_bridge:
         ipv4_address: 172.28.0.2
     volumes:
-
-      - ./unbound:/opt/unbound/etc/unbound:ro
-
+      - ./unbound/unbound.conf:/opt/unbound/etc/unbound/unbound.conf:ro
       - ./unbound-state:/var/lib/unbound
 
   pihole:
