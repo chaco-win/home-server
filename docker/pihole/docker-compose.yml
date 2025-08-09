@@ -1,37 +1,6 @@
+version: "3.8"
 
 services:
-  pihole:
-    container_name: pihole
-    image: pihole/pihole:latest
-    restart: unless-stopped
-    
-    ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      - "67:67/udp" 
-      - "80:80/tcp"
-
-    networks:
-     ph_network:
-       ipv4_address: 10.0.0.2
-       priority: 1000
-     ph_bridge:
-       ipv4_address: 172.28.0.2
-       priority: 900
-
-    environment:
-      TZ: 'America/Chicago' 
-      WEBPASSWORD: 'password'
-      DNSMASQ_LISTENING: local
-      PIHOLE_DNS_: 'IP_ADDRESS#5053'
-
-    volumes:
-      - ./etc-pihole:/etc/pihole
-      - ./etc-dnsmasq.d:/etc/dnsmasq.d
-    cap_add:
-      - NET_ADMIN
-
-
   unbound:
     image: mvance/unbound:latest
     container_name: unbound
@@ -40,7 +9,46 @@ services:
       ph_bridge:
         ipv4_address: 172.28.0.2
     volumes:
-      # Mount your Unbound config folder (must contain unbound.conf)
+
       - ./unbound:/opt/unbound/etc/unbound:ro
-      # Optional: persist Unbound state (e.g., root.key) separately
+
       - ./unbound-state:/var/lib/unbound
+
+  pihole:
+    image: pihole/pihole:latest
+    container_name: pihole
+    restart: unless-stopped
+    depends_on:
+      - unbound
+    networks:
+      ph_network:
+        ipv4_address: 10.0.0.2
+      ph_bridge:
+        ipv4_address: 172.28.0.3
+    environment:
+      TZ: America/Chicago
+      WEBPASSWORD: "change-me"
+      DNSMASQ_LISTENING: "all"
+      FTLCONF_LOCAL_IPV4: "10.0.0.2"
+      PIHOLE_DNS_: "172.28.0.2#53"  
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./etc-pihole:/etc/pihole
+      - ./etc-dnsmasq.d:/etc/dnsmasq.d
+
+networks:
+  ph_network:
+    driver: macvlan
+    driver_opts:
+      parent: enp3s0        
+    ipam:
+      config:
+        - subnet: 10.0.0.0/24
+          gateway: 10.0.0.1
+          ip_range: 10.0.0.2/32
+  ph_bridge:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/24
