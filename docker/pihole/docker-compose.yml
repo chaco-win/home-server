@@ -9,6 +9,7 @@ services:
     networks:
       ph_bridge:
         priority: 1000    
+        ipv4_address: 172.31.0.3
       ph_network: {}  
 
     environment:
@@ -29,14 +30,15 @@ services:
   unbound:
     container_name: unbound
     image: "mvance/unbound:latest"
-    networks: 
-      - ph_bridge
+    networks:
+      ph_bridge:
+        ipv4_address: 172.31.0.2
+
     volumes:
       - './unbound:/opt/unbound/etc/unbound'
     restart: unless-stopped
 networks:
     ph_bridge:
-      name: pihole_ph_bridge 
       driver: bridge
       ipam:
         config:
