@@ -6,29 +6,31 @@ services:
     ports:
       - "53:53/tcp"
       - "53:53/udp"
-      - "80:80/tcp"
     networks:
-     ph_network:
-       ipv4_address: 10.0.0.2
-     ph_bridge: {}
+      ph_bridge:
+        priority: 1000    
+      ph_network: {}  
+
     environment:
       TZ: 'America/Chicago'
       WEBPASSWORD: 'password'
       DNSMASQ_LISTENING: local
       PIHOLE_DNS_: 'unbound#53'
+      FTLCONF_LOCAL_IPV4: "10.0.0.2"
   
     volumes:
       - './etc-pihole:/etc/pihole'
       - './etc-dnsmasq.d:/etc/dnsmasq.d'
 
+    depends_on:
+    - unbound
+
     restart: unless-stopped
   unbound:
     container_name: unbound
     image: "mvance/unbound:latest"
-    ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-    networks: [ph_bridge]
+    networks: 
+      - ph_bridge
     volumes:
       - './unbound:/opt/unbound/etc/unbound'
     restart: unless-stopped
