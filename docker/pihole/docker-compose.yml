@@ -31,7 +31,7 @@ services:
       - "53:53/udp"
     networks: [ph_bridge]
     volumes:
-      - './unbound/unbound.conf:/opt/unbound/etc/unbound/'
+      - './unbound:/opt/unbound/etc/unbound'
     restart: unless-stopped
 networks:
     ph_bridge:
