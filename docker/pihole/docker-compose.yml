@@ -11,15 +11,13 @@ services:
      ph_network:
        ipv4_address: 10.0.0.2
        priority: 1000
-     ph_bridge:
-       ipv4_address: 172.31.0.3
-       priority: 900
+     ph_bridge: {}
     environment:
       TZ: 'America/Chicago'
       WEBPASSWORD: 'password'
       DNSMASQ_LISTENING: local
-      PIHOLE_DNS_: '172.31.0.2#53'
-    # Volumes store your data between container upgrades
+      PIHOLE_DNS_: 'unbound#53'
+  
     volumes:
       - './etc-pihole:/etc/pihole'
       - './etc-dnsmasq.d:/etc/dnsmasq.d'
@@ -31,9 +29,7 @@ services:
     ports:
       - "53:53/tcp"
       - "53:53/udp"
-    networks: 
-     ph_network:
-       ipv4_address: 172.31.0.2
+    networks: [ph_bridge]
     volumes:
       - './unbound/unbound.conf:/opt/unbound/etc/unbound/'
     restart: unless-stopped
@@ -43,8 +39,7 @@ networks:
       ipam:
         config:
           - subnet: 172.31.0.0/24
-            gateway: 172.31.0.1
-            ip_range: 172.31.0.2/32
+            
     ph_network:
       name: ph_network
       driver: macvlan
