@@ -34,6 +34,9 @@ services:
     ports:
       - "5335:53/udp"
       - "5335:53/tcp"
+    volumes:
+      - ./unbound:/opt/unbound/etc/unbound   # your config folder
+      - ./unbound-state:/var/lib/unbound    # DNSSEC state (root.key)
     restart: unless-stopped
 
 networks:
