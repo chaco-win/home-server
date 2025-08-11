@@ -29,7 +29,7 @@ services:
     restart: unless-stopped
 
   unbound:
-    image: nlnetlabs/unbound:latest
+    image: mvance/unbound:latest
     container_name: unbound
     ports:
       - "5335:53/udp"
