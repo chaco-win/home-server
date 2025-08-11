@@ -9,14 +9,14 @@ services:
     networks:
       ph_bridge:
         priority: 1000    
-        ipv4_address: 172.31.0.3
+        ipv4_address: 172.28.0.3
       ph_network: {}  
 
     environment:
       TZ: 'America/Chicago'
       WEBPASSWORD: 'password'
       DNSMASQ_LISTENING: 'all'
-      PIHOLE_DNS_: '172.31.0.2#53'
+      PIHOLE_DNS_: '172.28.0.2#53'
       FTLCONF_LOCAL_IPV4: "10.0.0.2"
   
     volumes:
@@ -31,12 +31,12 @@ services:
   unbound:
     image: mvance/unbound:latest
     container_name: unbound
-    ports:
-      - "5335:53/udp"
-      - "5335:53/tcp"
+    networks:
+      ph_bridge:
+        pv4_address: 172.28.0.2
     volumes:
-      - ./unbound:/opt/unbound/etc/unbound   # your config folder
-      - ./unbound-state:/var/lib/unbound    # DNSSEC state (root.key)
+      - ./unbound:/opt/unbound/etc/unbound   
+      - ./unbound-state:/var/lib/unbound    
     restart: unless-stopped
 
 networks:
@@ -44,7 +44,7 @@ networks:
       driver: bridge
       ipam:
         config:
-          - subnet: 172.31.0.0/24
+          - subnet: 172.28.0.0/24
             
     ph_network:
       name: ph_network
