@@ -27,16 +27,22 @@ services:
     - unbound
 
     restart: unless-stopped
+
   unbound:
     container_name: unbound
     image: "mvance/unbound:latest"
+    expose:
+      - "53"
     networks:
-      ph_bridge:
-        ipv4_address: 172.31.0.2
-
+      - dns
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
     volumes:
-      - './unbound:/opt/unbound/etc/unbound'
+      - "/data/unbound/my_conf/forward-records.conf:/opt/unbound/etc/unbound/forward-records.conf"
+      - "/data/unbound/my_conf/a-records.conf:/opt/unbound/etc/unbound/a-records.conf"
     restart: unless-stopped
+
 networks:
     ph_bridge:
       driver: bridge
