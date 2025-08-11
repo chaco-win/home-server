@@ -33,7 +33,7 @@ services:
     container_name: unbound
     networks:
       ph_bridge:
-        pv4_address: 172.28.0.2
+        ipv4_address: 172.28.0.2
     volumes:
       - ./unbound:/opt/unbound/etc/unbound   
       - ./unbound-state:/var/lib/unbound    
