@@ -281,7 +281,7 @@ params:
 #          enable: true
 #          url: "https://example.com"
 # Certifications
-  certifications:
+  achievements:
     enable: true
     # title: "Custom Name"
     items:
