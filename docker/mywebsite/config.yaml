@@ -283,7 +283,7 @@ params:
 # Certifications
   achievements:
     enable: true
-    # title: "Custom Name"
+    title: "Certifications"
     items:
       - title: CompTIA Security+
         content: Completed Oct-8-2022
